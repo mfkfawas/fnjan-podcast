@@ -64,6 +64,7 @@ export async function GET(request: Request) {
     return NextResponse.json({ results: podcastsToSave, source: "api" });
   } catch (error) {
     console.error("Search error:", error);
+
     return NextResponse.json(
       { error: "Something went wrong" },
       { status: 500 }
