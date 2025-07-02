@@ -11,7 +11,7 @@
 
 A modern, high-performance podcast discovery app built using the `latest Next.js App Router and React 19`, with full server-side rendering (SSR), React Server Components (RSC), and a clean, scalable architecture.
 
-## 🔗 `Live Demo`: fnjan-podcast.vercel.app
+## 🔗 `Live Demo`: [Podbayy Podcast](fnjan-podcast.vercel.app)
 
 ## 🚀 Features
 
