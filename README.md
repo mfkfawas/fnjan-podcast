@@ -15,11 +15,11 @@ A modern, high-performance podcast discovery app built using the `latest Next.js
 
 ## 🚀 Features
 
-- `🔍 Full-text podcast search`
-- `📱 Fully mobile responsive UI`
-- `⚡ React Server Components + SSR`
-- `🧱 Feature-based architecture for scalability`
-- `🧠 Smart search input` with debounced API calls and URL sync
+- 🔍 `Full-text podcast search`
+- 📱 `Fully mobile responsive UI`
+- ⚡ `React Server Components + SSR`
+- 🧱 `Feature-based architecture for scalability`
+- 🧠 `Smart search input` with debounced API calls and URL sync
 - 🗂️ Podcasts are `stored and cached in a serverless PostgreSQ`L database via `Drizzle ORM`
 
 ## 🛠️ Tech Stack
@@ -71,11 +71,11 @@ app/
 
 ## 🌟 Highlights
 
-- `⚛️ Built using React 19 + App Router + RSC`
-- `🚀 Turbopack` for faster builds and HMR
-- `🎨 Tailwind + Shadcn` for beautiful, consistent UI
-- `💾 Serverless PostgreSQL (Neon)` with cache logic and deduplication
-- `🧠 Search input auto-focuses, debounces, syncs with URL, and calls API`
+- ⚛️ `Built using React 19 + App Router + RSC`
+- 🚀 `Turbopack` for faster builds and HMR
+- 🎨 `Tailwind + Shadcn` for beautiful, consistent UI
+- 💾 `Serverless PostgreSQL (Neon)` with cache logic and deduplication
+- 🧠 `Search input auto-focuses, debounces, syncs with URL, and calls API`
 - Practical use of `TypeScript`, `custom hooks`, `URL query management`
 - Performance-conscious coding with `debounced input + lazy API` fetching
 - `Clean folder structure`, scalable and production-ready
