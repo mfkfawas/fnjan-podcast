@@ -1,37 +1,34 @@
 "use client";
 
-import { PodcastSearchSuccessResponse } from "@/app/api/search/types";
-import { CardCarousel } from "@/components/card-carousel";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { CardCarousel } from "@/components/card-carousel";
+import { PodcastSearchSuccessResponse } from "@/app/api/search/types";
 
 export function HomeView() {
   const searchParams = useSearchParams();
   const query = searchParams.get("q") ?? "";
-  const [results, setResults] = useState<
-    PodcastSearchSuccessResponse["results"]
-  >([]);
-  const [loading, setLoading] = useState(false);
+  const { loading, results } = useFetchData(query);
 
-  useEffect(() => {
-    if (!query.trim()) return;
-
-    setLoading(true);
-    fetch(`/api/search?q=${encodeURIComponent(query)}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setResults(data.results);
-        setLoading(false);
-      });
-  }, [query]);
-
-  if (!query.trim()) return null;
+  if (!query.trim())
+    return (
+      <div className="h-full grid place-items-center">
+        Please search for your favourite podcasts...
+      </div>
+    );
 
   if (loading)
     return (
       <div className="h-full grid place-items-center">
         <div className="spinner"></div>
+      </div>
+    );
+
+  if (!results || !results.length)
+    return (
+      <div className="h-full grid place-items-center">
+        No data for your search...
       </div>
     );
 
@@ -78,3 +75,24 @@ export function HomeView() {
     </div>
   );
 }
+
+const useFetchData = (query: string) => {
+  const [results, setResults] = useState<
+    PodcastSearchSuccessResponse["results"]
+  >([]);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    if (!query.trim()) return;
+
+    setLoading(true);
+    fetch(`/api/search?q=${encodeURIComponent(query)}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setResults(data.results);
+        setLoading(false);
+      });
+  }, [query]);
+
+  return { loading, results };
+};

@@ -8,23 +8,14 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "./ui/card";
+import { Card, CardContent, CardFooter } from "./ui/card";
 import { PodcastSearchSuccessResponse } from "@/app/api/search/types";
 import Image from "next/image";
 
 interface FilterCarouselProps {
-  // value?: string | null;
   isLoading?: boolean;
   onSelect: (value: string | null) => void;
   data: {
@@ -35,7 +26,6 @@ interface FilterCarouselProps {
 }
 
 export const CardCarousel = ({
-  // value,
   isLoading,
   onSelect,
   data,
@@ -93,8 +83,6 @@ export const CardCarousel = ({
 
           {!isLoading && (
             <>
-              {/* All option */}
-
               {/* Data options */}
               {data.map((item) => (
                 <CarouselItem
@@ -102,17 +90,7 @@ export const CardCarousel = ({
                   className="pl-3 basis-auto"
                   onClick={() => onSelect(item.authorName)}
                 >
-                  {/* <Badge
-                    variant={value === item.value ? "default" : "secondary"}
-                    className="rounded-lg px-3 py-1 cursor-pointer whitespace-nowrap text-sm"
-                  >
-                    {item.label}
-                  </Badge> */}
-
                   <Card className="bg-background border-background">
-                    {/* <CardHeader>
-                   
-                    </CardHeader> */}
                     <CardContent className="p-0">
                       <Image
                         src={item.url as string}
