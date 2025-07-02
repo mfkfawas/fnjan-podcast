@@ -11,7 +11,7 @@
 
 A modern, high-performance podcast discovery app built using the `latest Next.js App Router and React 19`, with full server-side rendering (SSR), React Server Components (RSC), and a clean, scalable architecture.
 
-## 🔗 `Live Demo`: [fnjan-podcast.vercel.app](fnjan-podcast.vercel.app)
+## 🔗 `Live Demo`: [https://fnjan-podcast.vercel.app/](https://fnjan-podcast.vercel.app/)
 
 ## 🚀 Features
 
@@ -21,6 +21,7 @@ A modern, high-performance podcast discovery app built using the `latest Next.js
 - 🧱 `Feature-based architecture for scalability`
 - 🧠 `Smart search input` with debounced API calls and URL sync
 - 🗂️ Podcasts are `stored and cached in a serverless PostgreSQ`L database via `Drizzle ORM`
+- ☁️ `Hosted on Vercel` for optimized, serverless edge performance
 
 ## 🛠️ Tech Stack
 
@@ -32,6 +33,7 @@ A modern, high-performance podcast discovery app built using the `latest Next.js
 | UI        | React 19, Tailwind CSS 4.0, [shadcn/ui](https://ui.shadcn.com)                         |
 | ORM       | [Drizzle ORM](https://orm.drizzle.team)                                                |
 | Database  | [PostgreSQL](https://www.postgresql.org) hosted on [Neon](https://neon.tech)           |
+| Hosting   | [Vercel](https://vercel.com)                                                           |
 
 ## 📦 Installation
 
