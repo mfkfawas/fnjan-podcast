@@ -26,18 +26,6 @@ export function HomeNavbar() {
     router.replace(`?${params.toString()}`, { scroll: false });
   }, [debouncedQuery, router]);
 
-  // useEffect(() => {
-  //   if (!debouncedQuery.trim()) return;
-
-  //   // ✅ Call your API
-  //   fetch(`/api/search?q=${encodeURIComponent(debouncedQuery)}`).then((res) =>
-  //     res.json().then((data) => {
-  //       console.log("data", data);
-  //       return data;
-  //     })
-  //   );
-  // }, [debouncedQuery]);
-
   const focusInput = () => {
     searchInputRef.current?.focus();
   };

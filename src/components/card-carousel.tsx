@@ -15,7 +15,7 @@ import { Card, CardContent, CardFooter } from "./ui/card";
 import { PodcastSearchSuccessResponse } from "@/app/api/search/types";
 import Image from "next/image";
 
-interface FilterCarouselProps {
+interface CardCarouselProps {
   isLoading?: boolean;
   onSelect: (value: string | null) => void;
   data: {
@@ -29,7 +29,7 @@ export const CardCarousel = ({
   isLoading,
   onSelect,
   data,
-}: FilterCarouselProps) => {
+}: CardCarouselProps) => {
   const [api, setApi] = useState<CarouselApi>();
   // The current is the one in the viewport and not the selected one(0 based index)
   const [current, setCurrent] = useState(0);

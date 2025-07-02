@@ -3,7 +3,9 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
+
 import { CardCarousel } from "@/components/card-carousel";
+import { Spinner } from "@/components/spinner";
 import { PodcastSearchSuccessResponse } from "@/app/api/search/types";
 
 export function HomeView() {
@@ -18,12 +20,7 @@ export function HomeView() {
       </div>
     );
 
-  if (loading)
-    return (
-      <div className="h-full grid place-items-center">
-        <div className="spinner"></div>
-      </div>
-    );
+  if (loading) return <Spinner />;
 
   if (!results || !results.length)
     return (
