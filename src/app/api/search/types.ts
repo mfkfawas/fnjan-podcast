@@ -1,8 +1,15 @@
+import { NewPodcastInput } from "@/db/schema";
+
 export interface SearchItunesAPIResponse {
   resultCount: number;
   results: PodcastData[];
   source: string;
 }
+
+export type PodcastSearchSuccessResponse = {
+  results: NewPodcastInput[];
+  source: "api" | "cache";
+};
 
 interface PodcastData {
   wrapperType: string;
