@@ -18,7 +18,7 @@ import { usePathname } from "next/navigation";
 
 export const HomeSidebar = () => {
   return (
-    <Sidebar className="border-gray-800" collapsible="icon">
+    <Sidebar className="border-foreground/25" collapsible="icon">
       <SidebarContent className="bg-background">
         <MainGroup />
         <PersonalizedGroup />

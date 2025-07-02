@@ -3,5 +3,54 @@ interface HomeViewProps {
 }
 
 export const HomeView = ({ searchTerm }: HomeViewProps) => {
-  return <div className="">Home View</div>;
+  return (
+    <>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+      <div>weeeee</div>
+    </>
+  );
 };
