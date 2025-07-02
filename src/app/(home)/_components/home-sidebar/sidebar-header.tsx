@@ -13,8 +13,8 @@ export function HomeSidebarHeader() {
   if (state === "collapsed") {
     return (
       <SidebarMenuItem>
-        <SidebarMenuButton tooltip="your profile" asChild>
-          <Link href="/">
+        <SidebarMenuButton tooltip="Logo" asChild>
+          <Link href="">
             <Image src="/logo.svg" alt="Logo" width={32} height={32} />
           </Link>
         </SidebarMenuButton>
@@ -24,7 +24,7 @@ export function HomeSidebarHeader() {
 
   return (
     <SidebarHeader className="mb-8">
-      <Link href="/">
+      <Link href="">
         <Image src="/logo.svg" alt="Logo" width={50} height={50} />
       </Link>
     </SidebarHeader>

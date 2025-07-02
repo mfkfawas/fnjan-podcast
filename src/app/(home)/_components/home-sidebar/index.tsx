@@ -12,9 +12,10 @@ import {
 } from "@/components/ui/sidebar";
 
 import { HomeSidebarHeader } from "./sidebar-header";
-import { Globe } from "lucide-react";
+import { Clock10, Globe, Grid2X2, Rows3Icon } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Badge } from "@/components/ui/badge";
 
 export const HomeSidebar = () => {
   return (
@@ -39,10 +40,10 @@ const MainGroup = () => {
           <SidebarMenuItem>
             <SidebarMenuButton
               isActive={pathname === "/"}
-              tooltip="Logo"
+              tooltip="Home"
               asChild
             >
-              <Link href="/">
+              <Link href="">
                 <Globe className="size-5" />
                 <span className="text-sm">Home</span>
               </Link>
@@ -55,27 +56,65 @@ const MainGroup = () => {
 };
 
 const PersonalizedGroup = () => {
-  const pathname = usePathname();
-
   return (
     <SidebarGroup>
       <SidebarGroupLabel className="font-bold">YOUR STUFF</SidebarGroupLabel>
       <SidebarGroupContent>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton isActive={false} tooltip="Logo" asChild>
-              <Link href="/content">
-                <Globe className="size-5" />
-                <span className="text-sm">Content</span>
+            <SidebarMenuButton
+              isActive={false}
+              tooltip="My Queue"
+              className="text-muted-foreground"
+              asChild
+            >
+              <Link href="">
+                <Rows3Icon className="size-5" />
+                <span className="text-sm">My Queue</span>
+                <Badge
+                  variant="secondary"
+                  className="bg-blue-500 hover:bg-blue-500"
+                >
+                  PREMIUM
+                </Badge>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
 
           <SidebarMenuItem>
-            <SidebarMenuButton tooltip="Exit Studio" asChild>
-              <Link href="/exit">
-                <Globe className="size-5" />
-                <span className="text-sm">Exit Studio</span>
+            <SidebarMenuButton
+              tooltip="My Podcasts"
+              className="text-muted-foreground"
+              asChild
+            >
+              <Link href="">
+                <Grid2X2 className="size-5" />
+                <span className="text-sm">My Podcasts</span>
+                <Badge
+                  variant="secondary"
+                  className="bg-blue-500 hover:bg-blue-500"
+                >
+                  PREMIUM
+                </Badge>
+              </Link>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+
+          <SidebarMenuItem>
+            <SidebarMenuButton
+              tooltip="Recents"
+              className="text-muted-foreground"
+              asChild
+            >
+              <Link href="">
+                <Clock10 className="size-5" />
+                <span className="text-sm">Recents</span>
+                <Badge
+                  variant="secondary"
+                  className="bg-blue-500 hover:bg-blue-500"
+                >
+                  PREMIUM
+                </Badge>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
